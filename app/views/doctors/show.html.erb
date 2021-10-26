@@ -1,0 +1,9 @@
+<h1>Doctor <%= @doctor.name %>, here are your appointments:</h1>
+
+<ol>
+<% @doctor.appointments.each do |app| %>
+    <%= binding.pry %>
+    <%= app.strftime("%B %d, %Y at %k:%M")%>
+    
+<% end %>
+</ol>
