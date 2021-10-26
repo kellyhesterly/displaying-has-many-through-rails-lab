@@ -1,15 +1,19 @@
-class DoctorsController < ApplicationController
-    def show
-        @doctor = Doctor.find(params[:id])
-    end
-
+class DoctorsControllers < ApplicationRecord
     def index
-        @doctor = Doctor.all
     end
 
-    private
+    def show
+    end
 
-    def doctor_params
-        params.require(:doctor).permit(:name, :department)
+    def new
+    end
+
+    def create
+    end
+
+    def edit
+    end
+
+    def update
     end
 end
