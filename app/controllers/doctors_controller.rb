@@ -1,4 +1,5 @@
 class DoctorsControllers < ApplicationController
+
     def index
         @doctors = Doctor.all
     end
@@ -12,7 +13,7 @@ class DoctorsControllers < ApplicationController
     end
 
     def create
-        @doctor = Doctore.create(doctor_params)
+        @doctor = Doctor.create(doctor_params)
         redirect_to doctor_path(@doctor)
     end
 
