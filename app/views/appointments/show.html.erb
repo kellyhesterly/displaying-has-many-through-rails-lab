@@ -1,5 +1,5 @@
-<h1>Appointment</h1>
+<%= @appointment.appointment_datetime.strftime("%B %d, %Y at 18:00") %>
 
-<%= link_to @appointment.patient.name, patient_path(@appointment.patient) %><br>
-<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %><br>
-<%= @appointment.appointment_datetime.strftime("%B %d, %Y at %k:%M") %>
+<%= link_to @appointment.doctor.name, doctor_path(@appointment.doctor) %>
+
+<%= link_to @appointment.patient.name, patient_path(@appointment.patient) %>

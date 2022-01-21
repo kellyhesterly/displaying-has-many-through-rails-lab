@@ -1,9 +1,9 @@
-<h1>Doctor <%= @doctor.name %>, here are your appointments:</h1>
+<%= @doctor.name %>
 
-<ol>
 <% @doctor.appointments.each do |app| %>
-    <%= binding.pry %>
-    <%= app.strftime("%B %d, %Y at %k:%M")%>
-    
+    <%= app.appointment_datetime.strftime("%B %d, %Y at 20:20")%> 
 <% end %>
-</ol>
+
+<% @doctor.patients.each do |pat| %>
+    <%= link_to pat.name, patient_path(pat) %>
+<% end %>
